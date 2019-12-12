@@ -1,32 +1,22 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components';
+
+const Sp = styled.p`
+  font-size: 20px;
+  color: green;
+`;
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header>
+    <div>
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link to="/">
           {siteTitle}
         </Link>
       </h1>
+      <Sp>hi babay</Sp>
     </div>
   </header>
 )
@@ -39,4 +29,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export { Header };
