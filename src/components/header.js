@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+
 import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components';
@@ -8,13 +8,11 @@ const Sp = styled.p`
   color: green;
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <div>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
-        </Link>
+      <h1>
+        
       </h1>
       <Sp>hi babay</Sp>
     </div>
@@ -25,8 +23,6 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
-export { Header };
+
+export  default Header;
