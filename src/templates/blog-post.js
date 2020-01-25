@@ -8,15 +8,15 @@ import { rhythm, scale } from "../utils/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.contentfulMisteravocado
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={post.title}
+          description={post.body.body || post.excerpt}
         />
         <article>
           <header>
@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
                 marginBottom: 0,
               }}
             >
-              {post.frontmatter.title}
+              {post.title}
             </h1>
             <p
               style={{
@@ -35,10 +35,10 @@ class BlogPostTemplate extends React.Component {
                 marginBottom: rhythm(1),
               }}
             >
-              {post.frontmatter.date}
+              {post.slug}
             </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: post.body.body }} />
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -89,15 +89,18 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
+    contentfulMisteravocado(slug: { eq: $slug } ) {
+      slug
+      title
+      body {
+        body
       }
+      image {
+        file {
+          url
+        }
+      }
+      tags
     }
   }
 `
