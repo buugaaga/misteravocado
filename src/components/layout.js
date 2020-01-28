@@ -1,75 +1,54 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from 'react'
+import styled from '@emotion/styled'
+import { Global } from '@emotion/core'
+import Menu from '../components/Menu'
+import Footer from '../components/Footer'
+import { globalStyles } from '../styles/globalStyles.js'
 
-import { rhythm, scale } from "../utils/typography"
+const Root = styled.div`
+  font-family: ${props => props.theme.fonts.body};
+`
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    )
+const Skip = styled.a`
+  font-family: ${props => props.theme.fonts.body};
+  padding: 0 1rem;
+  line-height: 60px;
+  background: #2867cf;
+  color: white;
+  z-index: 101;
+  position: fixed;
+  top: -100%;
+  &:hover {
+    text-decoration: underline;
   }
+  &:focus,
+  &:active,
+  &:hover {
+    top: 0;
+  }
+`
+
+const Layout = props => {
+  function handleFirstTab(e) {
+    if (e.keyCode === 9) {
+      document.body.classList.add('user-is-tabbing')
+    }
+  }
+  useEffect(() => window.addEventListener('keydown', handleFirstTab), [])
+
+  return (
+    <Root className="siteRoot">
+      <div className="siteContent">
+        <Skip href="#main" id="skip-navigation">
+          Skip to content
+        </Skip>
+        <Menu />
+        <div id="main">{props.children}</div>
+      </div>
+      <Footer />
+      <Global styles={globalStyles} />
+    </Root>
+  )
 }
 
 export default Layout
