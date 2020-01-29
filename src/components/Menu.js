@@ -22,6 +22,8 @@ const Nav = styled.nav`
   li {
     display: inline-block;
     margin-left: 1em;
+    margin-right: 1em;
+    white-space: nowrap;
     &:first-of-type {
       position: relative;
       margin: 0;

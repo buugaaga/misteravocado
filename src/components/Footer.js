@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import avocado from '../../static/images/avocado.png'
 
 const Wrapper = styled.footer`
   display: flex;
@@ -46,12 +47,12 @@ const Footer = () => (
     <List>
       <Item>
         <a
-          href="https://www.contentful.com/"
+          href="https://buugaaga.github.io/"
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
           <img
-            src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
+            src={avocado}
             style={{ width: '100px' }}
             alt="Powered by Contentful"
           />
@@ -59,19 +60,19 @@ const Footer = () => (
       </Item>
       <Item>
         <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
+          href="https://github.com/ryanwiemer/misteravocado"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
+          misteravocado
         </a>{' '}
         by{' '}
         <a
-          href="https://github.com/ryanwiemer"
+          href="https://github.com/buugaaga"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @ryanwiemer
+          ildar
         </a>
       </Item>
     </List>

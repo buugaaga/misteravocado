@@ -19,21 +19,21 @@ module.exports = {
   siteMetadata: {
     title: 'GCN',
     description:
-      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
-    siteUrl: 'https://gcn.netlify.com',
+      'Amazing static websites with Gatsby, Contentful and Netlify',
+    siteUrl: 'https://misteravocado.ru',
     twitter: '',
     image: '/images/share.jpg',
     menuLinks: [
       {
-        name: 'Home',
+        name: 'Домашняя страница',
         slug: '/',
       },
       {
-        name: 'About',
+        name: 'О нас',
         slug: '/about/',
       },
       {
-        name: 'Contact',
+        name: 'Связаться',
         slug: '/contact/',
       },
     ],
@@ -82,8 +82,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'GCN',
-        short_name: 'GCN',
+        name: 'misteravocado',
+        short_name: 'msavocado',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',
