@@ -17,10 +17,10 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'Misteravocado',
+    title: 'GCN',
     description:
-      'A misteravocado is amazing static websites with Gatsby, Contentful and Netlify',
-    siteUrl: 'https://misteravocado.ru',
+      'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
+    siteUrl: 'https://gcn.netlify.com',
     twitter: '',
     image: '/images/share.jpg',
     menuLinks: [
@@ -98,6 +98,7 @@ module.exports = {
         path: `./src/gatsby/schema/schema.gql`,
         update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
       },
-    }
+    },
+    'gatsby-plugin-netlify',
   ],
 }
