@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import styled from '@emotion/styled'
 import { Global } from '@emotion/core'
-import Menu from '../components/Menu'
-import Footer from '../components/Footer'
+import Menu from './Menu'
+import Footer from './Footer'
 import { globalStyles } from '../styles/globalStyles.js'
 
 const Root = styled.div`
