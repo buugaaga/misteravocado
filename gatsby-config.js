@@ -98,7 +98,6 @@ module.exports = {
         path: `./src/gatsby/schema/schema.gql`,
         update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
       },
-    },
-    'gatsby-plugin-netlify',
+    }
   ],
 }
