@@ -20,6 +20,7 @@
     "gatsby-plugin-netlify": "^2.1.31",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-schema-snapshot": "^1.0.0",
     "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-plugin-theme-ui": "^0.3.0",

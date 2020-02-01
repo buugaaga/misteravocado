@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
+import IconHome from '../icons/IconHome'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.primary};
@@ -26,8 +27,12 @@ const Nav = styled.nav`
     white-space: nowrap;
     &:first-of-type {
       position: relative;
+      display: flex;
       margin: 0;
       flex-basis: 100%;
+      div {
+        padding-left: 30px;
+      }
     }
   }
 
@@ -37,15 +42,22 @@ const Nav = styled.nav`
     font-weight: 600;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.text};
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: DarkGray;
+        }
     &:hover {
       color: white;
     }
   }
+  .active {
+      color: white;
+      div svg {
+        fill: white;
+      }
+    }
 `
-
-const activeLinkStyle = {
-  color: 'white',
-}
 
 const Menu = () => {
   const { menuLinks } = useSiteMetadata()
@@ -55,8 +67,8 @@ const Menu = () => {
         <ul>
           {menuLinks.map(link => (
             <li key={link.name}>
-              <Link to={link.slug} activeStyle={activeLinkStyle}>
-                {link.name}
+              <Link to={link.slug} activeClassName="active" >
+                { link.logo === "Home"  ? <div><IconHome /></div> : link.name }
               </Link>
             </li>
           ))}

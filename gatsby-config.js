@@ -27,6 +27,7 @@ module.exports = {
       {
         name: 'Домашняя страница',
         slug: '/',
+        logo: 'Home'
       },
       {
         name: 'О нас',
@@ -100,5 +101,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    'gatsby-plugin-react-svg',
   ],
 }
