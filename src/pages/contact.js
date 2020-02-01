@@ -14,7 +14,7 @@ const Contact = ({ data }) => {
         slug="contact"
       />
       <Container>
-        <PageTitle>Contact</PageTitle>
+        <PageTitle>Напишите нам</PageTitle>
         <ContactForm />
       </Container>
     </Layout>

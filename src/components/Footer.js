@@ -6,16 +6,17 @@ const Wrapper = styled.footer`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin: 0 auto;
-  max-width: ${props => props.theme.sizes.maxWidth};
+  width: 100%;
+  background-color: rgba(100, 100, 100, 0.2);
 `
 
 const List = styled.ul`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row no-wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   border-top: 1px solid ${props => props.theme.colors.secondary};
   padding: 1em 0 2em;
@@ -60,19 +61,20 @@ const Footer = () => (
       </Item>
       <Item>
         <a
-          href="https://github.com/ryanwiemer/misteravocado"
+          href="https://github.com/buugaaga"
           target="_blank"
           rel="noopener noreferrer"
         >
-          misteravocado
-        </a>{' '}
-        by{' '}
+          misteravocado.ru
+        </a>
+        {' '}
+        {' '}
         <a
           href="https://github.com/buugaaga"
           target="_blank"
           rel="noopener noreferrer"
         >
-          ildar
+          понравилось приложение?
         </a>
       </Item>
     </List>

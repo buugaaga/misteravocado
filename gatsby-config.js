@@ -32,10 +32,12 @@ module.exports = {
       {
         name: 'О нас',
         slug: '/about/',
+        logo: 'About'
       },
       {
         name: 'Связаться',
         slug: '/contact/',
+        logo: 'Contacts'
       },
     ],
     postsPerHomepage: 7,
@@ -101,6 +103,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
-    'gatsby-plugin-react-svg',
   ],
 }

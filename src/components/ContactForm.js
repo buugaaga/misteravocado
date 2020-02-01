@@ -200,7 +200,7 @@ class ContactForm extends React.Component {
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
-            Don’t fill this out:{' '}
+            Пожалуйста, на заполняйте так:{' '}
             <input name="bot" onChange={this.handleInputChange} />
           </label>
         </p>
@@ -208,7 +208,7 @@ class ContactForm extends React.Component {
         <Name
           name="name"
           type="text"
-          placeholder="Full Name"
+          placeholder="Полное имя"
           value={this.state.name}
           onChange={this.handleInputChange}
           required
@@ -216,7 +216,7 @@ class ContactForm extends React.Component {
         <Email
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder="Почта(email)"
           value={this.state.email}
           onChange={this.handleInputChange}
           required
@@ -224,17 +224,16 @@ class ContactForm extends React.Component {
         <Message
           name="message"
           type="text"
-          placeholder="Message"
+          placeholder="текст сообщения"
           value={this.state.message}
           onChange={this.handleInputChange}
           required
         />
-        <Submit name="submit" type="submit" value="Send" />
+        <Submit name="submit" type="submit" value="Отправить" />
 
         <Modal visible={this.state.showModal}>
           <p>
-            Thank you for reaching out. I will get back to you as soon as
-            possible.
+            Спасибо что обратились. Я отвечу как только это будет возможно.
           </p>
           <Button onClick={this.closeModal}>Okay</Button>
         </Modal>

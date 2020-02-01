@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
-import IconHome from '../icons/IconHome'
+import { IconHome, IconAbout, IconContacts } from '../icons/IconsOfMenu'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.primary};
@@ -42,11 +42,6 @@ const Nav = styled.nav`
     font-weight: 600;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.text};
-    svg {
-        width: 40px;
-        height: 40px;
-        fill: DarkGray;
-        }
     &:hover {
       color: white;
     }
@@ -65,10 +60,14 @@ const Menu = () => {
     <Header>
       <Nav>
         <ul>
-          {menuLinks.map(link => (
+          {menuLinks.map( (link, i) => (
             <li key={link.name}>
               <Link to={link.slug} activeClassName="active" >
-                { link.logo === "Home"  ? <div><IconHome /></div> : link.name }
+                { 
+                  link.logo === "Home"  ? <div><IconHome /></div> :
+                  link.logo === "About" ? <div><IconAbout /></div> : 
+                  link.logo === "Contacts" ? <div><IconContacts /></div> : link.name
+                }
               </Link>
             </li>
           ))}
