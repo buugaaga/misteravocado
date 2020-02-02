@@ -25,7 +25,8 @@ const Body = styled.div`
   }
 
   p {
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 18px;
     margin: 0 0 2em 0;
   }
 

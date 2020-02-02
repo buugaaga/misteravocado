@@ -4,6 +4,11 @@ export const globalStyles = css`
  v2.0 | 20110126
  License: none (public domain)
 */
+  @font-face {
+    font-family: "Didact Gothic";
+    src: url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+  }
+
   html,
   body,
   div,
@@ -166,8 +171,9 @@ export const globalStyles = css`
   }
 
   body {
-    line-height: 1;
-    font-size: 100%;
+    font-family: "inherit";
+    line-height: 1.4;
+    font-size: 120%;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import avocado from '../../static/images/avocado.png'
+
+// import { IconInstagram } from '../icons/IconsOfSocial'
+
 
 const Wrapper = styled.footer`
   display: flex;
@@ -47,16 +49,12 @@ const Footer = () => (
   <Wrapper>
     <List>
       <Item>
-        <a
-          href="https://buugaaga.github.io/"
-          rel="nofollow noopener noreferrer"
+        <a 
+          href="https://www.instagram.com/mr_avocado_nvk/"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <img
-            src={avocado}
-            style={{ width: '100px' }}
-            alt="Powered by Contentful"
-          />
+          <img src="/images/instagram.svg" alt="instagram"></img>
         </a>
       </Item>
       <Item>
