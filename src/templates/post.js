@@ -8,6 +8,9 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
+import SocialShare from '../components/SocialShare'
+import { useSiteMetadata } from '../hooks/use-site-metadata'
+
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -29,6 +32,8 @@ const PostTemplate = ({ data, pageContext }) => {
   } catch (error) {
     ogImage = null
   }
+  
+  const { siteUrl } = useSiteMetadata()
 
   return (
     <Layout>
@@ -50,6 +55,7 @@ const PostTemplate = ({ data, pageContext }) => {
           timeToRead={body.childMarkdownRemark.timeToRead}
         />
         <PageBody body={body} />
+        <SocialShare siteUrl={ `${siteUrl}/${slug}`} />
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>

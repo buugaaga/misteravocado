@@ -17,7 +17,7 @@ try {
 
 module.exports = {
   siteMetadata: {
-    title: 'GCN',
+    title: 'Mr.Avocado',
     description:
       'Amazing static websites with Gatsby, Contentful and Netlify',
     siteUrl: 'https://misteravocado.ru',
