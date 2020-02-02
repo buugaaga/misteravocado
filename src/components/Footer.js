@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-// import { IconInstagram } from '../icons/IconsOfSocial'
+import { IconInstagram } from '../icons/IconsOfSocial'
 
 
 const Wrapper = styled.footer`
@@ -54,7 +54,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/instagram.svg" alt="instagram"></img>
+          <IconInstagram />
         </a>
       </Item>
       <Item>
