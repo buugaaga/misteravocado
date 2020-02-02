@@ -44,7 +44,6 @@ module.exports = {
     postsPerPage: 6,
   },
   plugins: [
-    'gatsby-plugin-instagram-embed',
     `gatsby-plugin-emotion`,
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-react-helmet',
