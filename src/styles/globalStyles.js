@@ -8,6 +8,10 @@ export const globalStyles = css`
     font-family: "Didact Gothic";
     src: url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
   }
+  @font-face {
+    font-family: 'Caveat';
+    src: url('https://fonts.googleapis.com/css?family=Caveat&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet');
+  }
 
   html,
   body,

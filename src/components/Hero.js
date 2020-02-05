@@ -11,9 +11,8 @@ const Wrapper = styled.section`
   }
 `
 const BgImg = styled(Img)`
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 70%;
   &::before {
     content: '';
     background: rgba(0, 0, 0, 0.25);
@@ -29,19 +28,21 @@ const BgImg = styled(Img)`
 `
 
 const Title = styled.h1`
-  z-index: 2;
-  font-size: 3em;
+  /* z-index: 2; */
+  display: block;
+  font-family: ${ props => props.theme.fonts.head };
+  font-size: 2em;
   text-transform: capitalize;
-  font-weight: 600;
-  position: absolute;
+  font-weight: 400;
+ 
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
-  padding: 0 1rem;
-  top: 50%;
+  padding: 1rem;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   text-align: center;
-  color: white;
+  color: #555;
 `
 
 const Hero = props => (

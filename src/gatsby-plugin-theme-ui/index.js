@@ -10,6 +10,7 @@ export default {
   fonts: {
     body:
       'Didact Gothic, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+    head: 'Caveat, cursive',
   },
   sizes: {
     maxWidth: '1050px',

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { IconInstagram } from '../icons/IconsOfSocial'
+import { IconInstagram } from '../icons/SocialIcons'
 
 
 const Wrapper = styled.footer`
