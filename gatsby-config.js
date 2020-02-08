@@ -91,7 +91,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#ffffff',
         display: 'minimal-ui',
-        icon: './static/images/favicon.png',
+        icon: './static/images/misteravocado.jpg',
       },
     },
     'gatsby-plugin-offline',
