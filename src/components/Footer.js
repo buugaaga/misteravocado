@@ -5,12 +5,12 @@ import { IconInstagram } from '../icons/SocialIcons'
 
 
 const Wrapper = styled.footer`
-  display: flex;
+  /* display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   margin: 0 auto;
-  width: 100%;
+  width: auto;
   background-color: rgba(100, 100, 100, 0.2);
 `
 
@@ -19,7 +19,7 @@ const List = styled.ul`
   flex-flow: row no-wrap;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+ 
   border-top: 1px solid ${props => props.theme.colors.secondary};
   padding: 1em 0 2em;
   margin: 0 1.5em;
@@ -32,6 +32,7 @@ const Item = styled.li`
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     width: auto;
   }
+  
   a {
     font-weight: 600;
     transition: all 0.2s;

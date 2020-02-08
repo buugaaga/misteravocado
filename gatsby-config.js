@@ -22,7 +22,7 @@ module.exports = {
       'Amazing static websites with Gatsby, Contentful and Netlify',
     siteUrl: 'https://misteravocado.ru',
     twitter: '',
-    image: '/images/share.jpg',
+    image: '/images/misteravocado.jpg',
     menuLinks: [
       {
         name: 'Домашняя страница',
